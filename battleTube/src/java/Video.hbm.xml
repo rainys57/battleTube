@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 20, 2014 9:23:47 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="battleTube" name="data.Video" optimistic-lock="version" table="video">
+    <id name="videoId" type="int">
+      <column name="videoID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column length="25" name="name"/>
+    </property>
+    <property name="url" type="string">
+      <column length="35" name="url" unique="true"/>
+    </property>
+    <property name="genre" type="string">
+      <column length="15" name="genre"/>
+    </property>
+    <property name="sumVotes" type="java.lang.Integer">
+      <column name="sumVotes"/>
+    </property>
+    <property name="likeVotes" type="java.lang.Integer">
+      <column name="likeVotes"/>
+    </property>
+    <property name="dislikeVotes" type="java.lang.Integer">
+      <column name="dislikeVotes"/>
+    </property>
+  </class>
+</hibernate-mapping>

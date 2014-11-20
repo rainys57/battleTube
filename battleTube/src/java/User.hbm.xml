@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 20, 2014 9:23:47 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="battleTube" name="data.User" optimistic-lock="version" table="user">
+    <id name="userId" type="int">
+      <column name="userID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="firstName" type="string">
+      <column length="25" name="firstName"/>
+    </property>
+    <property name="lastName" type="string">
+      <column length="25" name="lastName"/>
+    </property>
+    <property name="username" type="string">
+      <column length="15" name="username" unique="true"/>
+    </property>
+    <property name="password" type="string">
+      <column length="30" name="password"/>
+    </property>
+    <property name="shareVideo" type="java.lang.Boolean">
+      <column name="shareVideo"/>
+    </property>
+  </class>
+</hibernate-mapping>

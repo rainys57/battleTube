@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 20, 2014 9:23:47 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="battleTube" name="data.ShareVideo" optimistic-lock="version" table="share_video">
+    <composite-id class="data.ShareVideoId" name="id">
+      <key-property name="userId" type="int">
+        <column name="userID"/>
+      </key-property>
+      <key-property name="videoId" type="int">
+        <column name="videoID"/>
+      </key-property>
+    </composite-id>
+  </class>
+</hibernate-mapping>
